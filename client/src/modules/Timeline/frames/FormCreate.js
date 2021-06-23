@@ -26,6 +26,7 @@ const FormCreate = () => {
     const userId = getUserId();
 
     const doUploadPhotos = (timelineId) => {
+        const uploadTime = moment().format('DDMMYYYYHHmmss');
         const formData = new FormData();
         for(let i = 0; i < images.length; i++) {
             formData.append('files', images[i].file)
@@ -33,7 +34,8 @@ const FormCreate = () => {
         mutationUploadPhotos.mutate({
             formData,
             userId,
-            timelineId
+            timelineId,
+            uploadTime
         });
     }
 
@@ -55,7 +57,7 @@ const FormCreate = () => {
         const timelineId = uuidv4();
         if(data.title !== '' & data.note !== '' & images.length > 0) {
             doUploadPhotos(timelineId);
-            doUploadContents({note: data.note, timelineId, title: data.title });
+            // doUploadContents({note: data.note, timelineId, title: data.title });
         } else {
             toast.dark('Some information is missing, please fill it out!!', {
                 autoClose: 4000

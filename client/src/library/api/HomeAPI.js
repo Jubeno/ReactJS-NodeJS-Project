@@ -6,13 +6,12 @@ export const uploadPhotos = async (data) => {
         'Content-Type': 'multipart/form-data'
     }
     return axios.post(
-        `${API_PATHS.uploadPhotos}?userId=${data.userId}&timelineId=${data.timelineId}`, 
+        `${API_PATHS.uploadPhotos}?userId=${data.userId}&timelineId=${data.timelineId}&uploadTime=${data.uploadTime}`, 
         data.formData, 
         configHeader 
     );
 }
 
 export const uploadContents = async (formData) => {
-    console.log('%c  formData:', 'color: #0e93e0;background: #aaefe5;', formData);
     return axios.post(API_PATHS.uploadContents, formData)
 }
