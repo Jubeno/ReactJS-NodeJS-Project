@@ -12,4 +12,4 @@ COPY server/app.js ./server/
 
 EXPOSE 5000
 
-CMD ["node", "./server/app.js"]
+CMD ["node", "./server/bin/www"]
