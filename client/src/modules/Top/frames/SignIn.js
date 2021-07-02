@@ -46,7 +46,7 @@ const SignIn = () => {
 
     return (
         <>
-            
+            <h1>Greeting</h1>
             <LoadingBar status={mutation.status}/>
             <Form id="sign-in" className="mt-3" onSubmit={handleSubmit(onSubmit)}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
