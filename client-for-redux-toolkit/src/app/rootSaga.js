@@ -1,9 +1,9 @@
 import { all } from "@redux-saga/core/effects";
-import todoSaga from "../features/todo/TodoSaga";
+import weatherSaga from "../features/weather/weatherSaga";
 
 export default function* rootSaga() {
     console.log('Saga is running!');
     yield all([
-        todoSaga()
+        weatherSaga()
     ]);
 }
