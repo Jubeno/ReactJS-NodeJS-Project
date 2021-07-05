@@ -76,6 +76,9 @@ const Weather = () => {
                         </div>
                     </Marker>
                 </ReactMapGL>
+                <WeatherArea>
+                    123dqwdqwdqwdqwd
+                </WeatherArea>
             </Wrapper>
         </>
     )
@@ -87,4 +90,13 @@ const Wrapper = styled.div`
     align-items: center;
 `;
 
+const WeatherArea = styled.div`
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 500px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.5);
+    filter: blur(8px);
+`;
 export default Weather;
